@@ -1,0 +1,218 @@
+@font-face {
+    font-family:"Lato" ;
+    src: url(../assets/fuentes/Lato-Regular.ttf);
+}
+
+/* First Desktop */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    height: 100vh;
+    display: grid;
+    grid-template-rows: 1fr repeat(2 2fr) 0.5fr;
+    grid-template-columns: repeat(3 1fr);
+    grid-template-areas: 
+        "header header header"
+        "main main main"
+        "main main main"
+        "footer footer footer";
+}
+
+header{
+grid-area: header;
+background-color: aqua;
+display: flex;
+flex-wrap: nowrap;
+justify-content: space-around;
+align-content: center;
+align-items: center;
+}
+
+#logo {
+    height: 50px;
+    width: 100px;
+    margin-bottom: 25px;
+}
+
+
+li a:hover {background-color: yellow;}
+
+main{
+grid-area: main;
+background-color: bisque;
+display: flex;
+flex-direction: row;
+flex-wrap: nowrap;
+}
+
+#MainService {
+    flex-basis: 50%;
+    justify-content: center;
+
+}
+
+#MainFabricacion{
+    display: flex;
+}
+
+
+#FTTD{
+margin-top: 20px;
+flex-basis: 50%;
+flex-wrap: nowrap;
+align-items: center;
+justify-content: center;
+flex-direction: column;
+}
+
+#FotoTD{
+    margin-left: 35%;
+}
+
+section h3 {
+    margin-left: 25%;
+}
+
+#TextoFTD{
+    margin-left: 10%;
+}
+
+#FTR{
+margin-top: 20px;
+flex-basis: 50%;
+flex-wrap: nowrap;
+align-items: center;
+justify-content: center;
+flex-direction: column;
+
+}
+
+#TextoFTR{
+    margin-left: 10%;
+}
+
+#FotoTR{
+    margin-left: 35%;
+}
+
+
+#Texto{
+flex-basis: 50%;
+display: flex;
+align-items: center;
+justify-content: center;
+font-size: 1rem ;
+font-family: Lato;
+margin-left: 10px;
+}
+
+
+#videoYoutube{
+    flex-basis: 50%;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+}
+
+
+
+footer {
+grid-area: footer;
+display: flex;
+background-color: aqua;
+flex-direction: row;
+flex-wrap: nowrap;
+align-items: center;
+justify-content: space-around;
+}
+
+/* Aplicando Media Queries */
+/* Version Tablet */
+
+@media (min-width: 769px) and (max-width: 1024px) {
+
+        #logo {
+            order: 2 ;
+            margin-right: 200px;
+        }  
+        
+       .barraL {
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        background-color: rgb(79, 165, 184);
+        order: 1;
+        padding: 20px;
+        }
+
+       #Texto {
+        font-size: 0.75rem ;
+       }
+       
+        
+        main{
+            flex-direction: column;
+            }
+    
+            #videoYoutube{
+                flex-basis: 100%;
+            }
+            
+            #Texto{
+                flex-basis: 100%;
+                padding: 20px;
+                }
+    
+            iframe {
+                height: 189px ;
+                width: 336px;
+                margin-bottom: 20px;
+            }
+    
+
+/* Version mobile */
+
+@media (max-width: 768px){
+    header  {
+        flex-direction: column;}
+
+    #logo {
+        order: 2;
+        }
+        
+    .barraL {
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        background-color: rgb(79, 165, 184);
+        order: 1;
+       }
+
+        
+    main{
+        flex-direction: column;
+        }
+    
+    #videoYoutube{
+        flex-basis: 100%;
+    }
+            
+    #Texto{
+    font-size: 0.5rem;
+    flex-basis: 100%;
+    padding: 20px;
+    }
+    
+    iframe {
+    height: 85px ;
+    width: 168px;
+    margin-bottom: 20px;
+    }
+}
+
